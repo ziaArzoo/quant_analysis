@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+results/

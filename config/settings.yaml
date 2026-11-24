@@ -1,0 +1,26 @@
+ticker: "^GSPC"
+start_date: null
+end_date: null
+period: "10y"
+interval: "1d"
+
+raw_data_path: "data/raw/sp500_daily.csv"
+processed_data_path: "data/processed/sp500_daily.csv"
+
+annualisation_factor: 252
+rolling_windows: [5, 10, 20, 60, 252]
+
+volatility_threshold: 1.5
+ewma_lambda: 0.94
+target_volatility: 0.10
+exposure_min: 0.25
+exposure_max: 1.5
+
+garch:
+  models: ["arch", "garch", "egarch", "gjrgarch"]
+  refit_frequency: 21
+  walk_forward: true
+
+aggregation:
+  weights: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+  threshold: 1.0
